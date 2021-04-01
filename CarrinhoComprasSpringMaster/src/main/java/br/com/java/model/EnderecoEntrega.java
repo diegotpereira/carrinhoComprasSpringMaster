@@ -98,7 +98,7 @@ public class EnderecoEntrega implements Serializable{
 
 	@Override
 	public String toString() {
-		return "IdEnderecoServico [idEnderecoServico=" + idEnderecoServico + ", ruaNome=" + ruaNome + ", casaNumero="
+		return "EnderecoEntrega [enderecoEntregaId=" + enderecoEntregaId + ", ruaNome=" + ruaNome + ", casaNumero="
 				+ casaNumero + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais + ", cep=" + cep
 				+ ", cliente=" + cliente + "]";
 	}

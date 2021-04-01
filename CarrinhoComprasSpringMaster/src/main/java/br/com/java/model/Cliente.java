@@ -40,12 +40,12 @@ public class Cliente implements Serializable{
 	private boolean ativado;
 	
 	@OneToOne
-	@JoinColumn(name="enderecoCobranca")
+	@JoinColumn(name="enderecoCobrancaId")
 	private EnderecoCobranca enderecoCobranca;
 	
 	@OneToOne
-	@JoinColumn(name = "idEnderecoServico")
-	private EnderecoEntrega idEnderecoServico;
+	@JoinColumn(name = "enderecoEnderecoId")
+	private EnderecoEntrega enderecoEntrega;
 	
 	@OneToOne
 	@JoinColumn(name = "carrinhoId")
@@ -115,13 +115,15 @@ public class Cliente implements Serializable{
 	public void setEnderecoCobranca(EnderecoCobranca enderecoCobranca) {
 		this.enderecoCobranca = enderecoCobranca;
 	}
+	
+	
 
-	public EnderecoEntrega getIdEnderecoServico() {
-		return idEnderecoServico;
+	public EnderecoEntrega getEnderecoEntrega() {
+		return enderecoEntrega;
 	}
 
-	public void setIdEnderecoServico(EnderecoEntrega idEnderecoServico) {
-		this.idEnderecoServico = idEnderecoServico;
+	public void setEnderecoEntrega(EnderecoEntrega enderecoEntrega) {
+		this.enderecoEntrega = enderecoEntrega;
 	}
 
 	public Carrinho getCarrinho() {
