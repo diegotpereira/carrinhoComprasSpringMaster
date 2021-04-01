@@ -48,7 +48,7 @@ public class ProdutoDaoImpl implements ProdutoDao{
 	}
 
 	@Override
-	public void editarPruduto(Produto produto) {
+	public void editarProduto(Produto produto) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		session.saveOrUpdate(produto);

@@ -12,7 +12,7 @@ public interface ProdutoDao {
 	
 	void adicionarProduto(Produto produto);
 	
-	void editarPruduto(Produto produto);
+	void editarProduto(Produto produto);
 	
 	void deletarProduto(Produto produto);
 }

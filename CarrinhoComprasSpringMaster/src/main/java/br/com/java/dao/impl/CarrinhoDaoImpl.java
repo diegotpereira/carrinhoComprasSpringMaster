@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.java.dao.CarrinhoDao;
 import br.com.java.model.Carrinho;
+import br.com.java.service.ClientePedidoService;
 
 @Repository
 @Transactional

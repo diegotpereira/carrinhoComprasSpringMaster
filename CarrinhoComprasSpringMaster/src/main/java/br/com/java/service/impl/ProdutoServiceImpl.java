@@ -36,7 +36,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 	@Override
 	public void editarProduto(Produto produto) {
 		// TODO Auto-generated method stub
-		produtoDao.editarPruduto(produto);
+		produtoDao.editarProduto(produto);
 	}
 
 	@Override
