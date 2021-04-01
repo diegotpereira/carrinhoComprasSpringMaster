@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -18,17 +19,19 @@
 <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 
 <!-- Bootstrap e CSS -->
-<link href="<c:url  value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+<%-- <link href="<c:url  value="/resources/css/bootstrap.min.css" />" rel="stylesheet"> --%>
 
 <!-- MaCarouselin CSS -->
-<link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
+<%-- <link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet"> --%>
 
 <!-- Main CSS -->
-<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+<%-- <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet"> --%>
 
 <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 <body>
+<!------------------------------------------------------NAVBAR ---------------------------- -->
+
 <div class="navbar-wrapper">
    <div class="container">
       <nav class="navbar navbar-inverse navbar-static-top">
@@ -44,9 +47,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                <ul class="nav navbar-nav">
-                 <li><a href="">Home</a>
-                 <li><a href="">Produtos</a>
-                 <li><a href="">Sobre</a>
+                 <li><a href="<c:url value="/" />">Home</a></li>
+                 <li><a href="<c:url value="/produto/produtoLista/todos" />">Produtos</a></li>
+                 <li><a href="<c:url value="/sobre" />">Sobre</a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
                  <c:if test="">
