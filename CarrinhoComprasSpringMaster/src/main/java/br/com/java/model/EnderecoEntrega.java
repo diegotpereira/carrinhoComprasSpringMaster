@@ -2,13 +2,11 @@ package br.com.java.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+
 
 @Entity
-public class EnderecoEntrega implements Serializable {
+public class EnderecoEntrega implements Serializable{
 
 	/**
 	 * 
@@ -18,15 +16,22 @@ public class EnderecoEntrega implements Serializable {
 	@Id
 	@GeneratedValue
 	private int enderecoEntregaId;
+	
 	private String ruaNome;
+	
 	private String casaNumero;
+	
 	private String cidade;
+	
 	private String estado;
+	
 	private String pais;
 	
+	private String cep;
+	
 	@OneToOne
-	private Cliente Cliente;
-
+	private Cliente cliente;
+	
 	public int getEnderecoEntregaId() {
 		return enderecoEntregaId;
 	}
@@ -75,17 +80,26 @@ public class EnderecoEntrega implements Serializable {
 		this.pais = pais;
 	}
 
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
 	public Cliente getCliente() {
-		return Cliente;
+		return cliente;
 	}
 
 	public void setCliente(Cliente cliente) {
-		Cliente = cliente;
+		this.cliente = cliente;
 	}
 
 	@Override
 	public String toString() {
-		return "EnderecoEntrega [enderecoEntregaId=" + enderecoEntregaId + ", ruaNome=" + ruaNome + ", casaNumero="
-				+ casaNumero + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais + "]";
+		return "IdEnderecoServico [idEnderecoServico=" + idEnderecoServico + ", ruaNome=" + ruaNome + ", casaNumero="
+				+ casaNumero + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais + ", cep=" + cep
+				+ ", cliente=" + cliente + "]";
 	}
 }

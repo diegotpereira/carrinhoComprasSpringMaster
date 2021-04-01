@@ -24,6 +24,7 @@ public class EnderecoCobranca implements Serializable{
 	private String cidade;
 	private String estado;
 	private String pais;
+	private String cep;
 	
 	@OneToOne
 	private Cliente cliente;
@@ -84,10 +85,18 @@ public class EnderecoCobranca implements Serializable{
 		this.cliente = cliente;
 	}
 
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
 	@Override
 	public String toString() {
 		return "EnderecoCobranca [enderecoCobrancaId=" + enderecoCobrancaId + ", ruaNome=" + ruaNome + ", casaNumero="
-				+ casaNumero + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais + ", cliente=" + cliente
-				+ "]";
+				+ casaNumero + ", cidade=" + cidade + ", estado=" + estado + ", pais=" + pais + ", cep=" + cep
+				+ ", cliente=" + cliente + "]";
 	}
 }
