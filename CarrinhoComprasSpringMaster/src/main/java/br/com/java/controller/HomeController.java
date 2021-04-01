@@ -1,7 +1,9 @@
 package br.com.java.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -11,7 +13,21 @@ public class HomeController {
 		return "home";
 	}
 	@RequestMapping("/login")
-	public String login() {
+	public String login(
+			@RequestParam(value = "error", required = false)
+			String error,
+			@RequestParam(value = "logout", required = false)
+			String logout,
+			Model model) {
+		
+		if (error != null) {
+			model.addAttribute("error", "Usuário e password inválidos!.");
+		}
+		
+		if (logout != null) {
+			model.addAttribute("msg", "Você foi desconectado com sucesso");
+		}
+		
 		return "login";
 	}
 	@RequestMapping("/sobre")
