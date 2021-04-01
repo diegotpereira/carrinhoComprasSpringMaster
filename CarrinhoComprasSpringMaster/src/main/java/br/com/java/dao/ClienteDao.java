@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.com.java.model.Cliente;
 
-public interface CleinteDao {
+public interface ClienteDao {
 	
 	void adicionarCliente(Cliente cliente);
 	
