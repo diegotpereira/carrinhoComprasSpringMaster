@@ -60,8 +60,4 @@ public class Carrinho implements Serializable {
 	public void setTotalGeral(double totalGeral) {
 		this.totalGeral = totalGeral;
 	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 }

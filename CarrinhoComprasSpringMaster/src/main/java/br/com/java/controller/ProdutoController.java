@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.java.model.Produto;
 import br.com.java.service.ProdutoService;
@@ -23,12 +25,17 @@ public class ProdutoController {
 		model.addAttribute("produtos", produtos);
 		return "produtoLista";
 	}
-	@RequestMapping("/mostrarProduto/")
-	public String viewProduto(Model model) {
+	@RequestMapping("/mostrarProduto/{ produtoIs }")
+	public String viewProduto(@PathVariable int produtoId, Model model) {
+		Produto produto = produtoService.getProdutoById(produtoId);
+		model.addAttribute("produto", produto);
 		return "motrarProduto";
 	}
 	@RequestMapping("/produtoLista")
-	public String getProdutoPorCategoria(Model model) {
+	public String getProdutoPorCategoria(@RequestParam ("buscarCondicao") String buscarCondicao, Model model) {
+		List<Produto> produtos = produtoService.getProdutoLista();
+		model.addAttribute("produtos", produtos);
+		model.addAttribute("buscarCondicao", buscarCondicao);
 		return "produtoLista";
 	}
 }
