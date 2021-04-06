@@ -19,7 +19,6 @@ public class ProdutoDaoImpl implements ProdutoDao{
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	@Override
 	public List<Produto> getProdutoLista() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -30,7 +29,6 @@ public class ProdutoDaoImpl implements ProdutoDao{
 		return produtoLista;
 	}
 
-	@Override
 	public Produto getProdutoById(int id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -39,7 +37,7 @@ public class ProdutoDaoImpl implements ProdutoDao{
 		return produto;
 	}
 
-	@Override
+//	@Override
 	public void adicionarProduto(Produto produto) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -47,7 +45,7 @@ public class ProdutoDaoImpl implements ProdutoDao{
 		session.flush();
 	}
 
-	@Override
+//	@Override
 	public void editarProduto(Produto produto) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -55,7 +53,7 @@ public class ProdutoDaoImpl implements ProdutoDao{
 		session.flush();
 	}
 
-	@Override
+//	@Override
 	public void deletarProduto(Produto produto) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
