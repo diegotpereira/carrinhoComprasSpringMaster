@@ -10,7 +10,7 @@
 </div><!-- /.container -->
 
 <!-- Bootstrap.js -->
-<%-- <script src="<c: value="/resources/js/bootstrap.min.js" />"></script> --%>
+<script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
 
 </body>
 </html>

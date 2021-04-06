@@ -19,13 +19,13 @@
 <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 
 <!-- Bootstrap e CSS -->
-<%-- <link href="<c:url  value="/resources/css/bootstrap.min.css" />" rel="stylesheet"> --%>
+<link href="<c:url  value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 
 <!-- MaCarouselin CSS -->
-<%-- <link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet"> --%>
+<link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
 
 <!-- Main CSS -->
-<%-- <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet"> --%>
+<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
 
 <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>

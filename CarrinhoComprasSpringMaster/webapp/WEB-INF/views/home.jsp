@@ -21,11 +21,11 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img class="second-slide home-image" src="<c:url value="/resouces/imagens/back2.jpg" />" alt="Second slide">
+                        <img class="second-slide home-image" src="<c:url value="/resources/imagens/back2.jpg" />" alt="Second slide">
                         <div class="container">
                             <div class="carousel-caption">
-                                <h1>Fatos que vocÃª deve saber sobre mÃºsica</h1>
-                                <p>A mÃºsica traz jey, para todos os nossos coraÃ§Ãµes. Ã‰ uma daquelas artes emocionais</p>
+                                <h1>Fatos que você deve saber sobre música</h1>
+                                <p>A música traz jey, para todos os nossos corações. É‰ uma daquelas artes emocionais</p>
                             </div>
                         </div>
                     </div>
@@ -33,8 +33,8 @@
                         <img class="third-slide home-image" src="<c:url value="/resources/imagens/back3.jpg" />" alt="Third slide">
                         <div class="container">
                             <div class="carousel-caption">
-                                <h1>Ã‰ um caso de jazz</h1>
-                                <p>AtravÃ©s de altos e baixos, de alguma forma consigo sobreviver na vida</p>
+                                <h1>É o caso do jazz</h1>
+                                <p>Através de tons altos e baixos, de alguma forma consigo sobreviver na vida</p>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
             <div class="container marketing">
                 <div class="col-lg-4">
                     <a class="btn btn-default" href="<c:url value="/produto/produtoLista?searchCondition=Instrument" />" role="button">
-                        <img class="img-circle" src="<c:url value="/resources/imagens/Instrument.jpg"/>"alt="Instrument Image" width="140" height="140">
+                        <img class="img-circle" src="<c:url value="resources/imagens/instrument.jpg"/>"alt="Instrument Image" width="140" height="140">
                     </a>  
                     
                     <h2>instrumento</h2>
@@ -58,11 +58,11 @@
 
                     <div class="col-lg-4">
                         <a class="btn btn-default" href="<c:url value="/product/productList?searchCondition=Instrument" />" role="button">
-                           <img class="img-circle" src="<c:url value="/resources/imagens/instrument.jpg"/>" alt="Instrument Image" width="140" height="140">
+                           <img class="img-circle" src="<c:url value="/resources/imagens/record.gif"/>" alt="Instrument Image" width="140" height="140">
                         </a>   
 
                         <h2>Discografia: </h2>
-                        <p>Uma coleÃ§Ã£o excepcional de discos musicais em favor do gÃªnero jazz tradicional e moderno</p>
+                        <p>Uma coleção excepcional de discos musicais em favor do gênero jazz tradicional e moderno</p>
                     </div>
 
                     <div class="col-lg-4">
@@ -72,7 +72,7 @@
                         </a>
                     </div>
 
-                    <h2>AcessÃ³rios</h2>
+                    <h2>Acessórios</h2>
                     <p>Todos os produtos musicais e geeks relacionados</p>
                 </div>
             </div>
