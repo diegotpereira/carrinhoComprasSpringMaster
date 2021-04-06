@@ -2,6 +2,18 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 
+<script>
+
+    $(document).ready(function(){
+        var buscarCondicao = '${buscarCondicao}';
+
+        $('.table').DataTable({
+            "lengthMenu": [[1,2,3,5,10, -1], [1,2,3,5,10, "All"]],
+            "oSearch" : {"sSearch": searchCondition}
+        });
+    });
+</script>
+
 <div class="container-wrapper">
   <div class="container"> 
      <h1>Lista de Produtos</h1>
@@ -21,9 +33,9 @@
       </tr>
     </thead>
     
-    <c:forEach items="${ produtos } " var="produto">
+    <c:forEach items="${produtos}" var="produto">
        <tr>
-         <td><img src="resources/imagens/${produto.produtoId}.png"><span class="glyphicon glyphicon-info-sign"></span></td>
+         <td><img src="<c:url value="/resources/imagens/${produto.produtoId}.png" />" alt="image" style="width:100%"/></td>
          <td>${ produto.produtoNome }</td>
          <td>${ produto.produtoCategoria }</td>
          <td>${ Produto.produtoCondicao }</td>
