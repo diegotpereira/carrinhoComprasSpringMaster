@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -14,13 +13,24 @@
 
 
 	<context:component-scan
-		base-package="br.com.java"></context:component-scan>
-		
+		base-package="br.com.java" />
+
+	<mvc:annotation-driven>
+		<mvc:argument-resolvers>
+			<bean
+				class="org.springframework.security.web.bind.support.AuthenticationPrincipalArgumentResolver" />
+		</mvc:argument-resolvers>
+	</mvc:annotation-driven>
+
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
-    <tx:annotation-driven />
-</beans>       
+
+	<mvc:resources mapping="/resources/**"
+		location="/WEB-INF/resources/" />
+
+	<tx:annotation-driven />
+
+</beans>
