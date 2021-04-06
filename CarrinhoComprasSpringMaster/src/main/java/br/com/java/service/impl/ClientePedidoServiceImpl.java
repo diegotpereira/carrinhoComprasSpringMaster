@@ -21,13 +21,13 @@ public class ClientePedidoServiceImpl implements ClientePedidoService {
 	@Autowired
 	private CarrinhoService carrinhoService;
 
-	@Override
+//	@Override
 	public void adicionarClientePedido(ClientePedido clientePedido) {
 		// TODO Auto-generated method stub
 		clientePedidoDao.adicionarClientePedido(clientePedido);
 	}
 
-	@Override
+//	@Override
 	public double getClientePedidoTotalGeral(int carrinhoId) {
 		// TODO Auto-generated method stub
 		double totalGeral = 0;

@@ -22,14 +22,14 @@ public class CarrinhoDaoImpl implements CarrinhoDao {
 	@Autowired
 	private ClientePedidoService clientePedidoService;
 
-	@Override
+//	@Override
 	public Carrinho getCarrinhoById(int carrinhoId) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		return (Carrinho) session.get(Carrinho.class, carrinhoId);
 	}
 
-	@Override
+//	@Override
 	public Carrinho valida(int carrinhoId) throws IOException {
 		// TODO Auto-generated method stub
 		Carrinho carrinho =  getCarrinhoById(carrinhoId);
@@ -41,7 +41,7 @@ public class CarrinhoDaoImpl implements CarrinhoDao {
 		return carrinho;
 	}
 
-	@Override
+//	@Override
 	public void update(Carrinho carrinho) {
 		// TODO Auto-generated method stub
 		int carrinhoId = carrinho.getCarrinhoId();

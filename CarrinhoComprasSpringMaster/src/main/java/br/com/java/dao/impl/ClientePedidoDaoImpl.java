@@ -16,7 +16,7 @@ public class ClientePedidoDaoImpl implements ClientePedidoDao{
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	@Override
+//	@Override
 	public void adicionarClientePedido(ClientePedido clientePedido) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();

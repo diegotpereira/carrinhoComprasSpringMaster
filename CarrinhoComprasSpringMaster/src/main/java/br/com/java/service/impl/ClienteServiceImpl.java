@@ -15,25 +15,25 @@ public class ClienteServiceImpl implements ClienteService{
 	@Autowired
 	private ClienteDao clienteDao;
 
-	@Override
+//	@Override
 	public void adicionarCliente(Cliente cliente) {
 		// TODO Auto-generated method stub
 		clienteDao.adicionarCliente(cliente);
 	}
 
-	@Override
+//	@Override
 	public Cliente getClienteById(int clienteId) {
 		// TODO Auto-generated method stub
 		return clienteDao.getClienteById(clienteId);
 	}
 
-	@Override
+//	@Override
 	public List<Cliente> getTodosClientes() {
 		// TODO Auto-generated method stub
 		return clienteDao.getTodosClientes();
 	}
 
-	@Override
+//	@Override
 	public Cliente getClientePorUsuarioNome(String usuarionome) {
 		// TODO Auto-generated method stub
 		return clienteDao.getClienteByUsername(usuarionome);

@@ -14,25 +14,25 @@ public class CarrinhoItemServiceImpl implements CarrinhoItemService{
 	@Autowired
 	private CarrinhoItemDao carrinhoItemDao;
 
-	@Override
+//	@Override
 	public void adicionarCarrinhoItem(CarrinhoItem carrinhoItem) {
 		// TODO Auto-generated method stub
 		carrinhoItemDao.adicionarCarrionhoItem(carrinhoItem);
 	}
 
-	@Override
+//	@Override
 	public void removerCarrinhoItem(CarrinhoItem carrinhoItem) {
 		// TODO Auto-generated method stub
 		carrinhoItemDao.removerCarrinhoItem(carrinhoItem);
 	}
 
-	@Override
+//	@Override
 	public void removerTodosItemsCarrinho(Carrinho carrinho) {
 		// TODO Auto-generated method stub
 		carrinhoItemDao.removerTodosItensCarrinho(carrinho);
 	}
 
-	@Override
+//	@Override
 	public CarrinhoItem getCarrionhoItemByProdutoID(int produtoId) {
 		// TODO Auto-generated method stub
 		return carrinhoItemDao.getCarrinhoItemPorProdutoId(produtoId);

@@ -20,7 +20,7 @@ public class CarrinhoItemDaoImpl implements CarrinhoItemDao{
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	@Override
+//	@Override
 	public void adicionarCarrionhoItem(CarrinhoItem carrinhoItem) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -28,7 +28,7 @@ public class CarrinhoItemDaoImpl implements CarrinhoItemDao{
 		session.flush();
 	}
 
-	@Override
+//	@Override
 	public void removerCarrinhoItem(CarrinhoItem carrinhoItem) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -36,7 +36,7 @@ public class CarrinhoItemDaoImpl implements CarrinhoItemDao{
 		session.flush();
 	}
 
-	@Override
+//	@Override
 	public void removerTodosItensCarrinho(Carrinho carrinho) {
 		// TODO Auto-generated method stub
 		List<CarrinhoItem> carrinhoItens = carrinho.getCarrinhoItens();
@@ -46,7 +46,7 @@ public class CarrinhoItemDaoImpl implements CarrinhoItemDao{
 		}
 	}
 
-	@Override
+//	@Override
 	public CarrinhoItem getCarrinhoItemPorProdutoId(int produtoId) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();

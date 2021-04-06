@@ -22,7 +22,7 @@ public class ClienteDaoImpl implements ClienteDao{
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	@Override
+//	@Override
 	public void adicionarCliente(Cliente cliente) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -58,14 +58,14 @@ public class ClienteDaoImpl implements ClienteDao{
 		
 	}
 
-	@Override
+//	@Override
 	public Cliente getClienteById(int clienteId) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		return (Cliente) session.get(Cliente.class, clienteId);
 	}
 
-	@Override
+//	@Override
 	public List<Cliente> getTodosClientes() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -74,7 +74,7 @@ public class ClienteDaoImpl implements ClienteDao{
 		return clienteLista;
 	}
 
-	@Override
+//	@Override
 	public Cliente getClienteByUsername(String usuarionome) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
