@@ -12,12 +12,12 @@ import br.com.java.service.ProdutoService;
 @RequestMapping("admin")
 public class adminHome {
 	
-	@Autowired
-	private ProdutoService produtoService;
-	
-	@Autowired
-	private ClienteService clienteService;
-	
+//	@Autowired
+//	private ProdutoService produtoService;
+//	
+//	@Autowired
+//	private ClienteService clienteService;
+//	
 	@RequestMapping
 	public String adminPage() {
 		return "admin";
