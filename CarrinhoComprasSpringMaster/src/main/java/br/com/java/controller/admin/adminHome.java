@@ -1,10 +1,13 @@
 package br.com.java.controller.admin;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.java.model.Cliente;
 import br.com.java.service.ClienteService;
 import br.com.java.service.ProdutoService;
 
@@ -12,11 +15,11 @@ import br.com.java.service.ProdutoService;
 @RequestMapping("admin")
 public class adminHome {
 	
-//	@Autowired
-//	private ProdutoService produtoService;
+	@Autowired
+	private ProdutoService produtoService;
 //	
-//	@Autowired
-//	private ClienteService clienteService;
+	@Autowired
+	private ClienteService clienteService;
 //	
 	@RequestMapping
 	public String adminPage() {
@@ -28,6 +31,9 @@ public class adminHome {
 	}
 	@RequestMapping("/cliente")
 	public String gestaoClientes(Model model) {
+		
+		List<Cliente> clienteLista = clienteService.getTodosClientes();
+		model.addAttribute("clienteLista", clienteLista);
 		return "gestaoClientes";
 	}
 }

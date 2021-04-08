@@ -9,7 +9,7 @@
            <div class="msg">${ msg }</div>
         </c:if>
         
-        <form name="lofinForm" action="<c:url value="/j_spring_security_check" />" method="post">
+        <form name="loginForm" action="<c:url value="/j_spring_security_check" />" method="post">
         
             <c:if test="${not empty error }">
               <div class="error" style="color: #ff0000;">${error }</div>
@@ -25,7 +25,7 @@
                <input type="password" id="senha" name="senha" class="form-control" />
             </div>
             
-            <input type="submit" value="Submit" class="btn btndefault" />
+            <input type="submit" value="Submit" class="btn btn-default" />
             <input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
         </form>
     </div>

@@ -28,7 +28,7 @@ public class AdminProduto {
 	@Autowired
 	private ProdutoService produtoService;
 	
-	@RequestMapping("/produto/adicionarProduto")
+	@RequestMapping("/produto/adicionarProduto/")
 	public String adicionarProduto(Model model) {
 		Produto produto = new Produto();
 		produto.setProdutoCategoria("instrumento");
@@ -39,7 +39,7 @@ public class AdminProduto {
 		return "adicionarProduto";
 	}
 	
-	@RequestMapping(value = "/produto/adicionarProduto", method = RequestMethod.POST)
+	@RequestMapping(value = "/produto/adicionarProduto/", method = RequestMethod.POST)
 	public String adicionarProdutoPost(@Valid @ModelAttribute("produto") Produto produto, BindingResult result, HttpServletRequest request) {
 		if (result.hasErrors()) {
 			return "adicionarProduto";
