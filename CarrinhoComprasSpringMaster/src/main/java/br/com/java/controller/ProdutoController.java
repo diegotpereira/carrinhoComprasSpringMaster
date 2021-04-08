@@ -25,7 +25,7 @@ public class ProdutoController {
 		model.addAttribute("produtos", produtos);
 		return "produtoLista";
 	}
-	@RequestMapping("/mostrarProduto/{ produtoIs }")
+	@RequestMapping("/mostrarProduto/{ produtoId }")
 	public String viewProduto(@PathVariable int produtoId, Model model) {
 		Produto produto = produtoService.getProdutoById(produtoId);
 		model.addAttribute("produto", produto);

@@ -42,7 +42,7 @@ public class ClienteDaoImpl implements ClienteDao{
 		
 		Autoridades novoAutoridades = new Autoridades();
 		novoAutoridades.setUsuarionome(cliente.getUsuarionome());
-		novoAutoridades.setAuthority("FUNCAO_USUARIO");
+		novoAutoridades.setAuthority("ROLE_USER");
 		
 		session.saveOrUpdate(novoUsuario);
 		session.saveOrUpdate(novoAutoridades);
