@@ -33,7 +33,7 @@ public class ProdutoController {
 		return "motrarProduto";
 	}
 	@RequestMapping("/produtoLista")
-	public String getProdutoPorCategoria(@RequestParam ("buscarCondicao") String buscarCondicao, Model model) {
+	public String getProdutoPorCategoria(@RequestParam (required=false,name="buscarCondicao") String buscarCondicao, Model model) {
 		List<Produto> produtos = produtoService.getProdutoLista();
 		model.addAttribute("produtos", produtos);
 		model.addAttribute("buscarCondicao", buscarCondicao);
