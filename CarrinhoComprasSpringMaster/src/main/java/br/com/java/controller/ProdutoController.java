@@ -1,5 +1,6 @@
 package br.com.java.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class ProdutoController {
 		return "produtoLista";
 	}
 	@RequestMapping("/mostrarProduto/{ produtoId }")
-	public String viewProduto(@PathVariable int produtoId, Model model) {
+	public String viewProduto(@PathVariable int produtoId, Model model) throws IOException{
 		Produto produto = produtoService.getProdutoById(produtoId);
 		model.addAttribute("produto", produto);
 		return "motrarProduto";
