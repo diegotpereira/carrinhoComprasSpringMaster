@@ -49,15 +49,15 @@
             </div>
             <div class="container marketing">
                 <div class="col-lg-4">
-                    <a class="btn btn-default" href="<c:url value="/produto/produtoLista?searchCondition=Instrument" />" role="button">
+                    <a class="btn btn-default" href="<c:url value="/produto/produtoLista?buscarCondicao=Instrumento" />" role="button">
                         <img class="img-circle" src="<c:url value="resources/imagens/instrument.jpg"/>"alt="Instrument Image" width="140" height="140">
                     </a>  
                     
-                    <h2>instrumento</h2>
+                    <h2>Instrumento</h2>
                     <p>Instrumentos delicados e bem elaborados</p>
 
                     <div class="col-lg-4">
-                        <a class="btn btn-default" href="<c:url value="/product/productList?searchCondition=Instrument" />" role="button">
+                        <a class="btn btn-default" href="<c:url value="/product/productList?buscarCondicao=Instrumento" />" role="button">
                            <img class="img-circle" src="<c:url value="/resources/imagens/record.gif"/>" alt="Instrument Image" width="140" height="140">
                         </a>   
 
@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <a class="btn btn-default" href="<c:url value="/produto/produtoLista?searchCondition=Accessory" />" role="button">
+                        <a class="btn btn-default" href="<c:url value="/produto/produtoLista?buscarCondicao=Acessorio" />" role="button">
                         
                            <img class="img-circle" src="<c:url value="/resources/imagens/accessory.jpg"/>" alt="Instrument image" width="140" height="140">
                         </a>

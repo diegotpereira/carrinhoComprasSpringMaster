@@ -52,25 +52,21 @@
                  <li><a href="<c:url value="/sobre" />">Sobre</a></li>
                </ul>
                <ul class="nav navbar-nav pull-right">
-                 <c:if test="">
-                   <li><a>Bem Vindo: </a></li>
-                   <li><a href="">Logout</a></li>
+                 <c:if test="${pageContext.request.userPrincipal.name != null}">
+                   <li><a>Bem Vindo: ${pageContext.request.userPrincipal.name}</a></li>
+                   <li><a href="<c:url value="/j_spring_security_logout" />">Logout</a></li>
                    
-                   <c:if test="">
-                      <li><a href="">Admin</a></li>
+                   <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                      <li><a href="<c:url value="/admin" />">Admin</a></li>
                    </c:if>
                    
-                   <c:if test="">
-                      <li><a href="">Carrinho</a></li>
-                   </c:if>
-                   
-                   <c:if test="">
-                     <li><a href="">Admin</a></li>
+                   <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                      <li><a href="<c:url value="/cliente/carrinho" />">Carrinho</a></li>
                    </c:if>
                  </c:if>
-                 <c:if test="">
-                     <li><a href="">Login</a></li>
-                     <li><a href="">Registrar</a></li>
+                 <c:if test="${pageContext.request.userPrincipal.name == null}">
+                     <li><a href="<c:url value="/login" />">Login</a></li>
+                     <li><a href="<c:url value="/registrar" />">Registrar</a></li>
                  </c:if>
                </ul>
             </div>

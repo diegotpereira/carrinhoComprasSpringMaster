@@ -1,11 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-       registro cliente sucesso.
-</body>
-</html>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ include file="/WEB-INF/views/template/header.jsp" %>
+
+<div class="container-wrapper">
+  <div class="container">
+     <section>
+        <div class="jumbotron">
+           <div class="container">
+              <h1>Cliente cadastrado com Sucesso!.</h1>
+           </div>
+        </div>
+     </section>
+     
+     <section class="container">
+       <p><a href="<spring:url value="/produto/produtoLista" /> class="btn btn-default">Produtos</a></p>
+     </section>
+<%@ include file="/WEB-INF/views/template/footer.jsp" %>
