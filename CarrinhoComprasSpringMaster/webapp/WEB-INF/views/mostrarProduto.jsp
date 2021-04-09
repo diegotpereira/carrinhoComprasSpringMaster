@@ -9,7 +9,7 @@
           <p class="lead">Aqui estão as informações detalhadas do produto:</p>
       </div>
       
-      <div class="container" ng-app="cartApp">
+      <div class="container" ng-app="carrinhoApp">
          <div class="row">
             <div class="col-md-5">
                <img src="<c:url value="/resources/imagens/${ produto.produtoId }.png" />" alt="image" style="width: 100%" />
