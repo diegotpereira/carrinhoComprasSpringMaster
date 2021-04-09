@@ -1,30 +1,30 @@
-var cartApp = angular.module ("cartApp", []);
+var carrinhoApp = angular.module ("carrinhoApp", []);
 
-cartApp.controller("cartCtrl", function($scope, $http){
+carrinhoApp.controller("carrinhoCtrl", function($scope, $http){
 
     $scope.refreshCart = function(){
-       $http.get('/rest/cart/' + $scope.cartId).success(function (data){
-           $scope.cart = data;
+       $http.get('/rest/carrinho/' + $scope.carrinhoId).success(function (data){
+           $scope.carrinho = data;
        });
     };
 
     $scope.clearCart = function(){
-        $http.delete('/rest/cart/' + $scope.cartId).success($scope.refreshCart());
+        $http.delete('/rest/carrinho/' + $scope.carrinhoId).success($scope.refreshCart());
     };
 
-    $scope.initCartId = function(cartId){
-        $scope.cartId = cartId;
-        $scope.refreshCart(cartId);
+    $scope.initCartId = function(carrinhoId){
+        $scope.carrinhoId = carrinhoId;
+        $scope.refreshCart(carrinhoId);
     };
 
-    $scope.addToCart = function(productId){
-        $http.put('/rest/cart/add/' + productId).success(function (){
-            alert('Product successfully added to the cart!');
+    $scope.addToCart = function(produtoId){
+        $http.put('/rest/carrinho/adicionar/' + produtoId).success(function (){
+            alert('Produto adicionado com sucesso ao carrinho!');
         });
     };
 
-    $scope.removeFromCart = function(productId){
-        $http.put('/rest/cart/remove/' + productId).success(function(data){
+    $scope.removeFromCart = function(produtoId){
+        $http.put('/rest/carrinho/remover/' + produtoId).success(function(data){
            $scope.refreshCart();
         });
     };
@@ -32,8 +32,8 @@ cartApp.controller("cartCtrl", function($scope, $http){
     $scope.calGrandTotal = function(){
         var grandTotal = 0;
 
-        for (var i = 0; i < $scope.cart.cartItems.length; i++){
-            grandTotal += $scope.cart.cartItems[i].totalPrice;
+        for (var i = 0; i < $scope.carrinho.cartItems.length; i++){
+            grandTotal += $scope.carrinho.cartItems[i].totalPrice;
         }
 
         return grandTotal;
