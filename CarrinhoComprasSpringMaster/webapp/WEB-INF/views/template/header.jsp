@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -29,11 +28,13 @@
 
 <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
-<body>
+
 <!------------------------------------------------------NAVBAR ---------------------------- -->
 
+<body>
 <div class="navbar-wrapper">
    <div class="container">
+   
       <nav class="navbar navbar-inverse navbar-static-top">
          <div class="container">
             <div class="navbar-header">
@@ -53,17 +54,20 @@
                </ul>
                <ul class="nav navbar-nav pull-right">
                  <c:if test="${pageContext.request.userPrincipal.name != null}">
+                 	
                    <li><a>Bem Vindo: ${pageContext.request.userPrincipal.name}</a></li>
                    <li><a href="<c:url value="/j_spring_security_logout" />">Logout</a></li>
                    
                    <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
-                      <li><a href="<c:url value="/admin" />">Admin</a></li>
+                      <li><a href="<c:url value="cliente/carrinho" />">Carrinho</a></li>
                    </c:if>
                    
                    <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
-                      <li><a href="<c:url value="/cliente/carrinho" />">Carrinho</a></li>
+                      <li><a href="<c:url value="admin" />">Admin</a></li>
                    </c:if>
+                   
                  </c:if>
+                 
                  <c:if test="${pageContext.request.userPrincipal.name == null}">
                      <li><a href="<c:url value="/login" />">Login</a></li>
                      <li><a href="<c:url value="/registrar" />">Registrar</a></li>
