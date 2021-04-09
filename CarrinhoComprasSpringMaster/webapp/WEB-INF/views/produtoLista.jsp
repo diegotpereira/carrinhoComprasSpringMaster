@@ -36,12 +36,12 @@
 		    
 		    <c:forEach items="${produtos}" var="produto">
 		       <tr>
-		         <td><img src="<c:url value="/resources/imagens/${produto.produtoId}.png" />" alt="image" style="width:100%"/></td>
-		         <td>${ produto.produtoNome }</td>
-		         <td>${ produto.produtoCategoria }</td>
-		         <td>${ produto.produtoCondicao }</td>
-		         <td>${ produto.produtoPreco } USD</td>
-		         <td><a href="<spring:url value="/produto/mostrarProduto/${produto.produtoId}" />"><span class="glyphicon glyphicon-info-sign"></span></a>
+			         <td><img src="<c:url value="/resources/imagens/${produto.produtoId}.png" />" alt="image" style="width:100%"/></td>
+			         <td>${ produto.produtoNome }</td>
+			         <td>${ produto.produtoCategoria }</td>
+			         <td>${ produto.produtoCondicao }</td>
+			         <td>${ produto.produtoPreco } USD</td>
+			         <td><a href="<spring:url value="/produto/mostrarProduto/${produto.produtoId}" />"><span class="glyphicon glyphicon-info-sign"></span></a>
 		       </tr>  
 		    </c:forEach>
 		  </table>

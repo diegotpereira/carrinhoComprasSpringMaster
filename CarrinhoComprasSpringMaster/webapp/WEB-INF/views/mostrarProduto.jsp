@@ -2,7 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 
-<div class="container-wrappper">
+<div class="container-wrapper">
    <div class="container">
       <div class="page-header">
           <h1>Produto Detalhe</h1>
@@ -28,13 +28,13 @@
                <c:set var="role" scope="page" value="${{ param.role }" />
                <c:set var="url"  scope="page" value="/produto/produtoLista"/>
                
-               <c:if test="${role='admin'}">
+               <c:if test="${role =='admin'}">
                   <c:set var="url" scope="page" value="/admin/produtoInventario" />
                </c:if>
                
                <p ng-controller="carrinhoCtrl">
                   <a href="<c:url value="${ url }"  />" class="btn btn-default">Voltar</a>
-                  <a href="#" class="btn btn-warning btn-large" ng-click="addToCart('${produto.produtoId }' )"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                  <a href="#" class="btn btn-warning btn-large" ng-click = "addToCart ('${produto.produtoId }' )"><span class="glyphicon glyphicon-shopping-cart"></span>Peça agora</a>
                   <a href="<spring:url value="/carrinho" />" class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>Mostrar Carrinho</a>
                </p>   
             </div>
