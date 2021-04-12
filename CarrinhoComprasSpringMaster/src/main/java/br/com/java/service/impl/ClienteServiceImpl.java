@@ -36,7 +36,7 @@ public class ClienteServiceImpl implements ClienteService{
 //	@Override
 	public Cliente getClientePorUsuarioNome(String usuarionome) {
 		// TODO Auto-generated method stub
-		return clienteDao.getClienteByUsername(usuarionome);
+		return clienteDao.getClientePorUsuarioNome(usuarionome);
 	}
 
 }

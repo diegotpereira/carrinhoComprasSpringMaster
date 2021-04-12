@@ -75,7 +75,7 @@ public class ClienteDaoImpl implements ClienteDao{
 	}
 
 //	@Override
-	public Cliente getClienteByUsername(String usuarionome) {
+	public Cliente getClientePorUsuarioNome(String usuarionome) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		Query query = session.createQuery("from Cliente where usuarionome = ?");
