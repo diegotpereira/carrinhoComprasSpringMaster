@@ -12,7 +12,7 @@
              </div>
         </section>
         
-        <section class="conatiner" ng-app="carrinhoApp">
+        <section class="container" ng-app="carrinhoApp">
             <div ng-controller="carrinhoCtrl" ng-init="initCartId('${ carrinhoId }')">
                 <div>
                     <a class="btn btn-danger pull-left" ng-click = "clearCarrinho()"><span class="ghyphicon ghyphicon-remove-sign"></span>Limpar Carrinho</a>
@@ -36,11 +36,20 @@
                        <td>{{ item.produto.produtoPreco }} </td>
                        <td>{{ item.quantidade }}</td>
                        <td>{{ item.totalPreco }}</td>
-                       <td><a href="#" class="label label-danger" ng-click="removeFromCarrinho"(item.produto.produtoId")
-              
-                      
+                       <td><a href="#" class="label label-danger" ng-click="removeFromCarrinho"(item.produto.produtoId")"><span class="glyphicon glyphicon-remove"></span>Remover</a></td>
+                     </tr>
+                     <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Total Compra: </th>
+                        <th>{{ calGrandTotal() }}</th>
+                        <th></th>
+                     </tr>     
                 </table>
+                
+                <a href="<spring:url value="/produtoLista" />" class="bt btn-default">Continue Compras</a>
             </div>
         </section>
-    </div>
-</div>
+<script src="<c:url value="/resources/js/controller.js?v3" /> "> </script>
+
+<%@ include file="/WEB-INF/views/template/footer.jsp" %>
