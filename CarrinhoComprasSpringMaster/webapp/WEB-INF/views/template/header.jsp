@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -15,7 +14,7 @@
 
 <!-- JQuery -->
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 
 <!-- Bootstrap e CSS -->
 <link href="<c:url  value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
@@ -26,7 +25,9 @@
 <!-- Main CSS -->
 <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
 
-<link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
 </head>
 
 <!------------------------------------------------------NAVBAR ---------------------------- -->
@@ -59,7 +60,7 @@
                    <li><a href="<c:url value="/j_spring_security_logout" />">Logout</a></li>
                    
                    <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
-                      <li><a href="<c:url value="cliente/carrinho" />">Carrinho</a></li>
+                      <li><a href="<c:url value="/cliente/carrinho" />">Carrinho</a></li>
                    </c:if>
                    
                    <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
