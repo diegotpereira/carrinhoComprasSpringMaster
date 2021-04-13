@@ -2,30 +2,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="descricao" content="">
-<meta name="autor" content="">
-<title>Minha Loja de Musica</title>
-
-<!-- Angular.js -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-
-<!-- Bootstrap e CSS -->
-<link href="<c:url  value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
-
-<!-- MaCarouselin CSS -->
-<link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
-
-<!-- Main CSS -->
-<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
-
-<link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="descricao" content="">
+	<meta name="autor" content="">
+	<title>Minha Loja de Musica</title>
+	
+	<!-- Angular.js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+	
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+	
+	<!-- Bootstrap e CSS -->
+	<link href="<c:url  value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+	
+	<!-- MaCarouselin CSS -->
+	<link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
+	
+	<!-- Main CSS -->
+	<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+	
+	<link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet">
 
 
 </head>
