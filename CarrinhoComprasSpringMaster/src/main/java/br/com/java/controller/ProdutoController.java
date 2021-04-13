@@ -26,11 +26,11 @@ public class ProdutoController {
 		model.addAttribute("produtos", produtos);
 		return "produtoLista";
 	}
-	@RequestMapping("/mostrarProduto/{ produtoId }")
+	@RequestMapping("/mostrarProduto/{produtoId}")
 	public String viewProduto(@PathVariable int produtoId, Model model) throws IOException{
 		Produto produto = produtoService.getProdutoById(produtoId);
 		model.addAttribute("produto", produto);
-		return "motrarProduto";
+		return "mostrarProduto";
 	}
 	@RequestMapping("/produtoLista")
 	public String getProdutoPorCategoria(@RequestParam (required=false,name="buscarCondicao") String buscarCondicao, Model model) {

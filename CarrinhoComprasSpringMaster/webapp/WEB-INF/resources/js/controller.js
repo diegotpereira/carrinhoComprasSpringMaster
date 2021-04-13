@@ -18,7 +18,7 @@ carrinhoApp.controller("carrinhoCtrl", function($scope, $http){
     };
 
     $scope.addToCart = function(produtoId){
-        $http.put('/rest/carrinho/add/' + produtoId).success(function (){
+        $http.put('/rest/carrinho/adicionar/' + produtoId).success(function (){
             alert('Produto adicionado com sucesso ao carrinho!');
         });
     };

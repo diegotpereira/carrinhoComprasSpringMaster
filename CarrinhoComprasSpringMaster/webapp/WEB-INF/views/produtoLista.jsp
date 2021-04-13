@@ -41,7 +41,7 @@
 			         <td>${ produto.produtoCategoria }</td>
 			         <td>${ produto.produtoCondicao }</td>
 			         <td>${ produto.produtoPreco } USD</td>
-			         <td><a href="<spring:url value="/produto/mostrarProduto/${produto.produtoId}" />"><span class="glyphicon glyphicon-info-sign"></span></a>
+			         <td><a href="<spring:url value="/produto/mostrarProduto/${produto.produtoId}" />"><span class="glyphicon glyphicon-info-sign"></span></a></td>
 		       </tr>  
 		    </c:forEach>
 		  </table>
