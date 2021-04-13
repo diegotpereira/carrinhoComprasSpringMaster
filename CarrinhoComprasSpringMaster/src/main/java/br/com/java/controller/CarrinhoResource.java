@@ -39,11 +39,11 @@ public class CarrinhoResource {
 	@Autowired
 	private ProdutoService produtoService;
 	
-	@RequestMapping
+	@RequestMapping("/{carrinhoId}")
 	public @ResponseBody Carrinho getCarrinhoById(@PathVariable(value = "carrinhoId") int carrinhoId) {
 		return carrinhoService.getCarrinhoById(carrinhoId);
 	}
-	@RequestMapping(value = "/adicionar/{ produtoId}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/adicionar/{produtoId}", method = RequestMethod.PUT)
 	@ResponseStatus(value= HttpStatus.NO_CONTENT)
 	public void adicionarItem(@PathVariable(value = "produtoId") int produtoId, @AuthenticationPrincipal User activeUser) {
 		Cliente cliente = clienteService.getClientePorUsuarioNome(activeUser.getUsername());
@@ -69,13 +69,13 @@ public class CarrinhoResource {
 		carrinhoItem.setCarrinho(carrinho);
 		carrinhoItemService.adicionarCarrinhoItem(carrinhoItem);
 	}
-	@RequestMapping(value = "/remover/{ produtoId }", method = RequestMethod.PUT)
+	@RequestMapping(value = "/remover/{produtoId}", method = RequestMethod.PUT)
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	public void removerItem(@PathVariable(value = "produtoId") int produtoId) {
 		CarrinhoItem carrinhoItem = carrinhoItemService.getCarrionhoItemByProdutoID(produtoId);
 		carrinhoItemService.removerCarrinhoItem(carrinhoItem);
 	}
-	@RequestMapping(value = "/{ carrinhoId", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/{carrinhoId}", method = RequestMethod.DELETE)
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	public void limparCarrinho(@PathVariable(value = "carrinhoId") int carrinhoId) {
 		Carrinho carrinho = carrinhoService.getCarrinhoById(carrinhoId);
