@@ -12,7 +12,7 @@ import br.com.java.service.ClienteService;
 import br.com.java.service.ProdutoService;
 
 @Controller
-@RequestMapping("admin")
+@RequestMapping("/admin")
 public class adminHome {
 	
 	@Autowired

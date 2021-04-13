@@ -43,6 +43,6 @@
                  </tr>    
               </c:forEach>    
       </table>
-      <a href="<spring:url value="/admin/produto/adicionarproduto" />" class="btn btn-primary">Novo Produto</a>
+      <a href="<spring:url value="/admin/produto/adicionarProduto" />" class="btn btn-primary">Novo Produto</a>
 
 <%@ include file="/WEB-INF/views/template/footer.jsp" %>
