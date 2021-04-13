@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.java.model.Cliente;
+import br.com.java.model.Produto;
 import br.com.java.service.ClienteService;
 import br.com.java.service.ProdutoService;
 
@@ -27,6 +28,8 @@ public class adminHome {
 	}
 	@RequestMapping("/produtoInventario")
 	public String produtoInventario(Model model) {
+		List<Produto> produtos = produtoService.getProdutoLista();
+		model.addAttribute("produtos", produtos);
 		return "produtoInventario";
 	}
 	@RequestMapping("/cliente")
