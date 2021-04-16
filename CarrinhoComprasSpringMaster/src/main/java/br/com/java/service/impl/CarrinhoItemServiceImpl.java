@@ -17,7 +17,7 @@ public class CarrinhoItemServiceImpl implements CarrinhoItemService{
 //	@Override
 	public void adicionarCarrinhoItem(CarrinhoItem carrinhoItem) {
 		// TODO Auto-generated method stub
-		carrinhoItemDao.adicionarCarrionhoItem(carrinhoItem);
+		carrinhoItemDao.adicionarCarrinhoItem(carrinhoItem);
 	}
 
 //	@Override

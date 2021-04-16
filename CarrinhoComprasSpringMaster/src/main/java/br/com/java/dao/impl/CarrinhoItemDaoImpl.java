@@ -21,7 +21,7 @@ public class CarrinhoItemDaoImpl implements CarrinhoItemDao{
 	private SessionFactory sessionFactory;
 
 //	@Override
-	public void adicionarCarrionhoItem(CarrinhoItem carrinhoItem) {
+	public void adicionarCarrinhoItem(CarrinhoItem carrinhoItem) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		session.saveOrUpdate(sessionFactory);

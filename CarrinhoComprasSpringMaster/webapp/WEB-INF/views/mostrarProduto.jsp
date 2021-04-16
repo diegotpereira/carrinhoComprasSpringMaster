@@ -34,7 +34,7 @@
                
                <p ng-controller="carrinhoCtrl">
                   <a href="<c:url value="${url}" />" class="btn btn-default">Voltar</a>
-                  <a href="#" class="btn btn-warning btn-large" ng-click="addToCart('${produto.produtoId}')"><span class="glyphicon glyphicon-shopping-cart"></span>Compre Agora</a>
+                  <a href="#" class="btn btn-warning btn-large" ng-click="adicionarNoCarrinho('${produto.produtoId}')"><span class="glyphicon glyphicon-shopping-cart"></span>Compre Agora</a>
                   <a href="<spring:url value="/cliente/carrinho"/>" class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>Mostrar Carrinho</a>
                </p>   
             </div>

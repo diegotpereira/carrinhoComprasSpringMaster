@@ -8,22 +8,22 @@ carrinhoApp.controller("carrinhoCtrl", function($scope, $http){
        });
     };
 
-    $scope.clearCart = function(){
+    $scope.clearCarrinho = function(){
         $http.delete('/rest/carrinho/' + $scope.carrinhoId).success($scope.refreshCart());
     };
 
-    $scope.initCartId = function(carrinhoId){
+    $scope.iniciarCarrinhoId = function(carrinhoId){
         $scope.carrinhoId = carrinhoId;
         $scope.refreshCart(carrinhoId);
     };
 
-    $scope.addToCart = function(produtoId){
+    $scope.adicionarNoCarrinho = function(produtoId){
         $http.put('/rest/carrinho/adicionar/' + produtoId).success(function (){
             alert('Produto adicionado com sucesso ao carrinho!');
         });
     };
 
-    $scope.removeFromCart = function(produtoId){
+    $scope.removeFromCarrinho = function(produtoId){
         $http.put('/rest/carrinho/remove/' + produtoId).success(function(data){
            $scope.refreshCart();
         });

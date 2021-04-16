@@ -5,7 +5,7 @@ import br.com.java.model.CarrinhoItem;
 
 public interface CarrinhoItemDao {
 	
-	void adicionarCarrionhoItem(CarrinhoItem carrinhoItem);
+	void adicionarCarrinhoItem(CarrinhoItem carrinhoItem);
 	
 	void removerCarrinhoItem(CarrinhoItem carrinhoItem);
 	

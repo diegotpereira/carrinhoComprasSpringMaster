@@ -13,10 +13,10 @@
         </section>
         
         <section class="container" ng-app="carrinhoApp">
-            <div ng-controller="carrinhoCtrl" ng-init="initCartId('${carrinhoId}')">
+            <div ng-controller="carrinhoCtrl" ng-init="iniciarCarrinhoId('${carrinhoId}')">
                 <div>
                     <a class="btn btn-danger pull-left" ng-click = "clearCarrinho()"><span class="ghyphicon ghyphicon-remove-sign"></span>Limpar Carrinho</a>
-                    <a href="<spring:url value = "/pedido/${ carrinhoId }" />" class="btn btn-success pull-right"><span class="ghyphicon ghyphicon-shopping-cart"></span>Verificação de saída</a>
+                    <a href="<spring:url value="/pedido/${carrinhoId}" />" class="btn btn-success pull-right"><span class="ghyphicon ghyphicon-shopping-cart"></span>Verificação de saída</a>
                 </div>
                 
                 <br/><br/><br/>
