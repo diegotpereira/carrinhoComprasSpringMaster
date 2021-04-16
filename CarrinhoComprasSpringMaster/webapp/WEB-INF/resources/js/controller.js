@@ -24,7 +24,7 @@ carrinhoApp.controller("carrinhoCtrl", function($scope, $http){
     };
 
     $scope.removeFromCarrinho = function(produtoId){
-        $http.put('/rest/carrinho/remove/' + produtoId).success(function(data){
+        $http.put('/rest/carrinho/remover/' + produtoId).success(function(data){
            $scope.refreshCart();
         });
     };

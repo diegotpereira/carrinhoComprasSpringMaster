@@ -12,7 +12,7 @@
       <div class="container" ng-app ="carrinhoApp">
          <div class="row">
             <div class="col-md-5">
-               <img src="<c:url value="/resources/imagens/${produto.produtoId}.png" />" alt="image" style="width:100%"/>
+               <img src="<c:url value="/resources/imagens/${produto.produtoId}.png" />" alt="imagem" style="width:100%"/>
             </div>
             
             <div class="col-md-5">
@@ -35,7 +35,7 @@
                <p ng-controller="carrinhoCtrl">
                   <a href="<c:url value="${url}" />" class="btn btn-default">Voltar</a>
                   <a href="#" class="btn btn-warning btn-large" ng-click="adicionarNoCarrinho('${produto.produtoId}')"><span class="glyphicon glyphicon-shopping-cart"></span>Compre Agora</a>
-                  <a href="<spring:url value="/cliente/carrinho"/>" class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>Mostrar Carrinho</a>
+                  <a href="<spring:url value="/cliente/carrinho"/>" class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>Exibir Carrinho</a>
                </p>   
             </div>
          </div>
