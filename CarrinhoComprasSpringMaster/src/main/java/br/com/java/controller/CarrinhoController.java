@@ -24,7 +24,7 @@ public class CarrinhoController {
 		int carrinhoId = cliente.getCarrinho().getCarrinhoId();
 		return "redirect:/cliente/carrinho/" + carrinhoId;
 	}
-	@RequestMapping("/carrinho")
+	@RequestMapping("/{carrinhoId}")
 	public String getCarrinhoRedirect(@PathVariable (value="carrinhoId")int carrinhoId, Model model) {
 		model.addAttribute("carrinhoId", carrinhoId);
 		return "carrinho";

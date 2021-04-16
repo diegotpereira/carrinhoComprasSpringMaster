@@ -13,7 +13,7 @@
         </section>
         
         <section class="container" ng-app="carrinhoApp">
-            <div ng-controller="carrinhoCtrl" ng-init="initCartId('${ carrinhoId }')">
+            <div ng-controller="carrinhoCtrl" ng-init="initCartId('${carrinhoId}')">
                 <div>
                     <a class="btn btn-danger pull-left" ng-click = "clearCarrinho()"><span class="ghyphicon ghyphicon-remove-sign"></span>Limpar Carrinho</a>
                     <a href="<spring:url value = "/pedido/${ carrinhoId }" />" class="btn btn-success pull-right"><span class="ghyphicon ghyphicon-shopping-cart"></span>Verificação de saída</a>
@@ -31,18 +31,18 @@
                       <th>Ação</th>
                    </tr>
                    
-                   <tr ng-repeat = "item in carrino.cartItems">
+                   <tr ng-repeat = "item in carrinho.carrinhoItens">
                        <td>{{ item.produto.produtoNome }} </td>
                        <td>{{ item.produto.produtoPreco }} </td>
                        <td>{{ item.quantidade }}</td>
                        <td>{{ item.totalPreco }}</td>
-                       <td><a href="#" class="label label-danger" ng-click="removeFromCarrinho"(item.produto.produtoId")"><span class="glyphicon glyphicon-remove"></span>Remover</a></td>
+                       <td><a href="#" class="label label-danger" ng-click="removeFromCarrinho(item.produto.produtoId)"><span class="glyphicon glyphicon-remove"></span>Remover</a></td>
                      </tr>
                      <tr>
                         <th></th>
                         <th></th>
                         <th>Total Compra: </th>
-                        <th>{{ calGrandTotal() }}</th>
+                        <th>{{calcPrecoTotal()}}</th>
                         <th></th>
                      </tr>     
                 </table>

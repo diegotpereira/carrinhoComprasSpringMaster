@@ -29,13 +29,13 @@ carrinhoApp.controller("carrinhoCtrl", function($scope, $http){
         });
     };
 
-    $scope.calGrandTotal = function(){
-        var grandTotal = 0;
+    $scope.calcPrecoTotal = function(){
+        var totalGeral = 0;
 
-        for (var i = 0; i < $scope.carrinho.cartItems.length; i++){
-            grandTotal += $scope.carrinho.cartItems[i].totalPrice;
+        for (var i = 0; i < $scope.carrinho.carrinhoItens.length; i++){
+            totalGeral += $scope.carrinho.carrinhoItens[i].precoTotal;
         }
 
-        return grandTotal;
+        return totalGeral;
     }
 });

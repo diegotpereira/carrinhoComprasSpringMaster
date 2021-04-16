@@ -50,11 +50,11 @@ public class CarrinhoResource {
 		Carrinho carrinho = cliente.getCarrinho();
 		Produto produto = produtoService.getProdutoById(produtoId);
 		
-		List<CarrinhoItem> carrinhoItems = carrinho.getCarrinhoItens();
+		List<CarrinhoItem> carrinhoItens = carrinho.getCarrinhoItens();
 		
-		for (int i = 0; i < carrinhoItems.size(); i++) {
-			if (produto.getProdutoId() == carrinhoItems.get(i).getProduto().getProdutoId()) {
-				CarrinhoItem carrinhoItem = carrinhoItems.get(i);
+		for (int i = 0; i < carrinhoItens.size(); i++) {
+			if (produto.getProdutoId() == carrinhoItens.get(i).getProduto().getProdutoId()) {
+				CarrinhoItem carrinhoItem = carrinhoItens.get(i);
 				carrinhoItem.setQuantidade(carrinhoItem.getQuantidade() + 1);
 				carrinhoItem.setPrecoTotal(produto.getProdutoPreco()*carrinhoItem.getQuantidade());
 				carrinhoItemService.adicionarCarrinhoItem(carrinhoItem);
